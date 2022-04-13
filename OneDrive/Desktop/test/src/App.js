@@ -10,16 +10,9 @@ const actors = [
 ];
   return (
     <div className='App'>
-      <div className='person'>
-        <ul>
         {
-          actors.map(actor =><> <li>{actor.nayok}</li>
-           <p>{actor.naika}</p>
-           </>
-            )
+          actors.map(actor => <Person nayok={actor.nayok} naika={actor.naika}></Person>)
         }
-        </ul>
-      </div>
     </div>
   );
 }
@@ -28,11 +21,11 @@ export default App;
 
 const Person = (props) => {
   console.log(props);
-  const {name, profession} = props;
+  const {nayok, naika} = props;
     return (
       <div className='person'>
-        <h3>Name: {name}</h3>
-        <h5>Profession: {profession} </h5>
+        <h3>Name: {nayok}</h3>
+        <h5>Profession: {naika} </h5>
       </div> 
     );
 }
